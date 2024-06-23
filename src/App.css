@@ -2,37 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  height: 100vh;
+  padding: 0 20px;
+  background-color: #000000;
+}
+
+.text-wrapper {
+  flex: 0 0 45%; /* Fix width to 45% */
+  text-align: left;
+  padding: 20px;
+  margin-top: -200px;
+}
+
+.model-wrapper {
+  flex: 0 0 45%; /* Fix width to 45% */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.content-section {
+  padding: 100px 20px;
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.typing-container h1 {
+  font-size: 2em;
+  font-weight: 300; /* Make the font lighter */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column; /* Stack text on top of the model */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    padding-top: 200px; /* Add padding to prevent overlapping with navbar */
   }
-  to {
-    transform: rotate(360deg);
+
+  .text-wrapper {
+    max-width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    margin-bottom: 0; /* Reduce space between text and model */
+    margin-top: 0px;
+  }
+
+  .model-wrapper {
+    max-width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    padding-top: 0;
+    margin-top: -100px;
+  }
+
+  .typing-container h1 {
+    font-size: 1.2em;
   }
 }

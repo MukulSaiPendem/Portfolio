@@ -1,0 +1,33 @@
+.typing-container {
+    font-size: 1.4em;
+    white-space: pre-line; /* Ensure new lines are respected */
+  }
+  
+  .typing-container h1 {
+    margin: 0;
+    font-weight: 300; /* Make the font lighter */
+  }
+
+  .icons {
+    display: inline-flex;
+    gap: 30px;
+    margin-left: 10px;
+    color: black;
+  }
+  
+  .icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .typing-container {
+      font-size: 1.5em;
+    }
+    .icons img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
